@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 import Timer from './Timer'
 
 class App extends Component {
-
+// Technically the constructor is the first function called upon instantiating any class in JS
+// not just React Components. The constructor has an important role in teh life of a component, as it acts as a perfect
+//place to set the initial state of the component.
   //no props being used here, so we can use the shorthand declaration of state
   state = {
     timerIDs: []
   }
 
-
   //Your code here:
 
-
-
-
-
-
-
+  // write a componentDidMount method that invokes the EXISTING handleAddTimer class method
+componentDidMount() {
+  this.handleAddTimer() // here i am invoking the exsting handleAddTimer class method
+}
 
 
   // No need to modify anything in render or the class methods below
